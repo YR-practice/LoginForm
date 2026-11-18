@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="index.js"></script>
+</head>
+<body>
+    <div class="overlay" id="overlay">
+        <div class="modal">
+            <button class="modal-close" id="modalClose" aria-label="Close">&times;</button>
+            <h2>Success</h2>
+            <p>Login successful!</p>
+            <div id="result" class="modal-name" aria-live="polite"></div>
+            <button class="modal-button" id="modalButton">CLOSE</button>
+        </div>
+    </div>
+
+    <form id="loginForm" novalidate>
+        <div class="field">
+            <input type="text" name="firstName" placeholder="First name" autocomplete="given-name">
+            <small class="error-message" data-error-for="firstName" aria-live="polite"></small>
+        </div>
+
+        <div class="field">
+            <input type="text" name="lastName" placeholder="Last name" autocomplete="family-name">
+            <small class="error-message" data-error-for="lastName" aria-live="polite"></small>
+        </div>
+
+        <div class="field">
+            <input type="email" name="email" placeholder="Email" autocomplete="email">
+            <small class="error-message" data-error-for="email" aria-live="polite"></small>
+        </div>
+
+        <div class="field">
+            <input type="password" name="password" id="password" placeholder="Password" autocomplete="new-password">
+            <small class="error-message" data-error-for="password" aria-live="polite"></small>
+        </div>
+
+        <div class="show-password">
+            <input type="checkbox" id="togglePassword">
+            <label for="togglePassword">Show password</label>
+        </div>
+
+        <button type="submit" id="submitButton" disabled>Login</button>
+    </form>
+</body>
+</html>
